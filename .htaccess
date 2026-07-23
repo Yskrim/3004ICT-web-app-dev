@@ -1,0 +1,57 @@
+#
+# Modify Apache Server for this directory...
+#
+# Common Options are...
+#    Indexes                 Generate a directory index if no index.html
+#    FollowSymLinks          Follow symbolic links as normal
+#    SymLinksIfOwnerMatch    allow symbolic link if the link and file match
+#    ExecCGI                 execute .cgi files for the resulting document
+#    Includes                Full server side includes
+#    IncludesNoExec          server side includes but don't execute anything
+#
+# Default Server Options are...
+#   Options Indexes FollowSymLinks
+#
+# Enable Indexes and limit SymLinks
+Options Indexes SymLinksIfOwnerMatch
+
+# Enable ".cgi" for CGI scripts...
+#
+#Options +ExecCGI
+#AddHandler cgi-script .cgi
+
+
+# Enable ".shtml" for server side includes in HTML
+#
+#Options +Includes
+#AddType text/html .shtml
+#AddOutputFilter includes .shtml
+
+# To password protect your web site,
+# Run this command to create a password file...
+#    htpasswd -c ~/html/.htpasswd {login_username}
+# Then uncomment the following...
+#
+#AuthName "Password Protected Directory"
+#AuthUserFile /var/www/html/.htpasswd
+#AuthType Basic
+#require valid-user
+
+# Limit access to web server to the code-server proxy forwarder.
+# That is, only allow YOU to access the Apache Web Server via the code-server
+# proxy forwarder, and its SSO password protection, via URL
+#
+#    https://{user}.elf.ict.griffith.edu.au/proxy/80/
+#
+#Order Deny,Allow
+#Deny from all
+#Allow from 127.0.0.1
+
+# Allow code-server absolute proxy forwarder to work correctly
+# Via the URL:  https://{user}.elf.ict.griffith.edu.au/absproxy/80/
+#
+# This will not fix the directory listing "/icons/" path.
+# Though the normal code-server proxy fowarder does not handle that either.
+#
+#RewriteEngine On
+#RewriteRule ^absproxy/80/(.*)$ /var/www/html/$1 [L]

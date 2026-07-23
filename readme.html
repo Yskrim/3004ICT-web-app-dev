@@ -1,0 +1,102 @@
+<html lang="au">
+<head>
+<title>Software Development Environment</title>
+<link rel="stylesheet" href="https://login.elf.ict.griffith.edu.au/style.css" type="text/css" />
+</head>
+<body>
+<h1 align="center">Software Development Environment</h1>
+
+<p>Welcome to your <b>Software Development Environment</b>. This server
+contains tools for developing web application with PHP 8.4, and an Apache 2.4
+web server. The software installed in this environment include Apache with PHP,
+code-server, PHP composer (to install Laravel), and other PHP, NodeJS, MongoDB,
+SQLite, mysql-client, and many other packages.</p>
+
+<p>If you require some other software package, you can make a request to your
+academic lecturer, who will forward it to the Unversities S3 Linux team. </p>
+
+<ul>
+<li><p>For more information about this server and the software development
+    environments you are using, see the service welcome page at </p>
+
+    <p align="center"><code>
+       <a href="https://elf.ict.griffith.edu.au/"
+       >https://elf.ict.griffith.edu.au/</a>
+    </code></p>
+
+    &nbsp;</li>
+
+<li><p>A Web based User-interface based on <a
+    href="https://login.elf.ict.griffith.edu.au/code-server.html"
+    >code-server</a> has been installed, and should be running on </p>
+
+    <p align="center"><code>
+       https://<i>{s-number}</i>.elf.ict.griffith.edu.au/
+    </code></p>
+
+    This interface will require you to login via the users SSO authentication
+    system.
+
+    &nbsp;</li>
+
+<li><p>Your apache web server is online at this URL...</p>
+
+    <p align="center"><code>
+       https://<i>{s-number}-80</i>.elf.ict.griffith.edu.au/
+    </code></p>
+
+    <p>refers to the "<code>~/html/</code>" directory of your environment's
+    working home.  Hence the html file you are reading now resides in the
+    file "<code>~/html/readme.html</code>". </p>
+
+    <p>You are free to create other files and directories under
+    "<code>~/html/</code>" to house your web projects and exercises (in HTML,
+    PHP or Laravel). However anything in this directory is public, so any
+    security related information (configs, passwords, etc) should <b>not</b> be
+    saved here. </p>
+
+    <p>As this directory is public (to the university network), you are expected
+    to be responsible, and not post matter that is inappropriate, offensive, or
+    NSFW.  It is your responsibility to become familiar with the <A
+    HREF="https://www.griffith.edu.au/code-practice" >IT Code of Practice</A>.
+    </p>
+
+    <p>Also please do not publish any Personal Identity Information (PII) such
+    as your name, address, phone numbers, etc., in these web pages.  This is
+    a concern for the security of you and the university as a whole. </p>
+
+    &nbsp;</li>
+
+<li><p>A "Node.js" application can be created <b>outside</b> the Apache
+    "<code>html</code>" sub-directory, and can use either ports 3000 or 3001
+    (HTTP protocol)...  For example if using 3000, then when run it will be
+    accessible on the URL... </p>
+
+    <p align="center"><code>
+       https://<i>{s-number}-3000</i>.elf.ict.griffith.edu.au/
+    </code></p>
+
+    &nbsp;</li>
+
+<li><p>To install the Laravel Software, run</p>
+
+    <p align="center"><code>
+       composer global require laravel/installer
+    </code></p>
+
+    <p>To create a laravel server project, please read <a
+    href="https://login.elf.ict.griffith.edu.au/laravel_project.html"
+    >Creating a secure laravel project</a>.  This is important information as
+    it describes how to create a sub-directory containing a secure laravel
+    project. </p>
+
+    <p><b>Do not</b> rely on other similar information that can be found on the
+    web, as these are, more often than not, insecure. See the above
+    documentation for more detail. </p>
+
+    &nbsp;</li>
+
+</ul>
+
+</body></html>
+
