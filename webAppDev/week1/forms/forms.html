@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Forms</title>
+        <meta charset="utf8" />
+    </head>
+    <body>
+        <br />
+        <div id="app1" style="display: flex; flex-direction: column; width: 50%; margin: 0 auto;">
+            <label for="form1">GET FORM</label>
+            <div>
+                <p>
+                    GET sends the form data in URL parameters. Data in this case
+                    is accessible via URLsearchParams, hovewer it can't be
+                    accessed directly. In order to access the entries, the
+                    script has to iterate through the object and add the new
+                    elements to the page. This is much easier with React and not
+                    as much but still easy with Angular
+                </p>
+                <p>
+                    Get forms are to be used in search requests, when we don't
+                    know what data to expect like google search.
+                </p>
+            </div>
+            <form id="form1" method="GET">
+                <input type="text" name="email" placeholder="email" />
+                <input type="password" name="password" placeholder="password" />
+                <button type="submit">Log in</button>
+                <button type="reset">Reset form</button>
+                <div id="results"></div>
+            </form>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div id="app2" style="display: flex; flex-direction: column; width: 50%; margin: 0 auto;">
+            <label for="form2">POST FORM</label>
+            <div>
+                <p>
+                    POST method on the other hand wraps the passed values into
+                    html request to the server. Normally every page should have
+                    some sort of server connected to it to perform calculations.
+                    But there is a practice of making some apps a monorepo,
+                    which enables a frontend app to make, send requests and
+                    process html responses without exposing logic or API keys to
+                    the frontend. The data won't be accessible via parameters,
+                    though still interceptable when someone is sniffing on an
+                    unsecured network.
+                </p>
+                <p>
+                    Post requests are used when we need to send the data to the
+                    server to process it. Like login, file uploads, changing
+                    something.
+                </p>
+            </div>
+
+            <form id="form2" method="POST">
+                <input type="text" name="email" placeholder="email" />
+                <input type="password" name="password" placeholder="password" />
+                <button type="submit">Log in</button>
+                <button type="reset">Reset form</button>
+                <div id="post-res"></div>
+            </form>
+        </div>
+        <br />
+        <hr />
+        <br />
+
+        <div
+            id="app3"
+            style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                width: 50%;
+            "
+        >
+            <div>
+                <h2>Get personal details</h2>
+                <label for="form3">Personal details form</label>
+            </div>
+            <form
+                style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 12px;
+                "
+            >
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                </div>
+
+                <div>
+                    <label for="age">Age</label>
+                    <select id="age">
+                        <option>1-10</option>
+                        <option>11-18</option>
+                        <option>19-24</option>
+                        <option>25-34</option>
+                        <option>35-50</option>
+                        <option>Over 50</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="country">Country</label>
+                    <select>
+                        <option value="Australia">Australia</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </div>
+
+                <label style="display: flex; gap: 10px">
+                    <span>Likes</span>
+                    <div id="likes">
+                        <div style="display: flex; flex-direction: column">
+                            <label>
+                                <input type="checkbox" value="Swimming" />
+                                <span>Swimming</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="Running" />
+                                <span>Running</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="Dancing" />
+                                <span>Dancing</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="Biking" />
+                                <span>Biking</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="Surfing" />
+                                <span>Surfing</span>
+                            </label>
+                        </div>
+                    </div>
+                </label>
+
+                <label style="display: flex; gap: 10px">
+                    <span>Disikes</span>
+                    <div id="likes">
+                        <div style="display: flex; flex-direction: column">
+                            <label>
+                                <input type="radio" value="Dogs" />
+                                <span>Dogs</span>
+                            </label>
+                            <label>
+                                <input type="radio" value="Cats" />
+                                <span>Cats</span>
+                            </label>
+                            <label>
+                                <input type="radio" value="Snakes" />
+                                <span>Snakes</span>
+                            </label>
+                            <label>
+                                <input type="radio" value="Birds" />
+                                <span>Birds</span>
+                            </label>
+                            <label>
+                                <input type="radio" value="Spiders" />
+                                <span>Spiders</span>
+                            </label>
+                        </div>
+                    </div>
+                </label>
+
+                <label style="max-width: 200px; display: flex; gap: 10px">
+                    <span>Description</span>
+                    <textarea></textarea>
+                </label>
+
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <br />
+        <br />
+        <hr />
+        <br />
+
+
+        <div style="display: flex; flex-direction: column; width: 50%; margin: 0 auto;">
+            <p>HTMl Authoring Principles</p>
+            <ul>
+                <li>Write standard HTML</li>
+                <li>Use validators</li>
+                <li>Only use HTML for structure of the document</li>
+                <li>Use CSS for presentation</li>
+                <li>Use metadata for automated processing</li>
+                <li>Use accessibility rules</li>
+                <li>Write reusable HTML</li>
+            </ul>
+        </div>
+    </body>
+    <script type="module">
+        document.querySelectorAll("form").forEach((form) =>
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(e.currentTarget);
+                console.log(formData.entries());
+
+                console.log(e.target.method);
+
+                if (e.target.method === "get") {
+                    const results = document.getElementById("results");
+                    results.innerHTML = "";
+                    const params = new URLSearchParams(formData);
+                    genRes(params, results);
+                } else {
+                    const postRes = document.getElementById("post-res");
+                    genRes(formData, postRes);
+                }
+
+                function genRes(data, res) {
+                    for (const [k, v] of data.entries()) {
+                        const p = document.createElement("p");
+                        p.textContent = `${k}:${v}`;
+                        res.appendChild(p);
+                    }
+                }
+            }),
+        );
+    </script>
+</html>
