@@ -32,10 +32,10 @@ Options Indexes SymLinksIfOwnerMatch
 #    htpasswd -c ~/html/.htpasswd {login_username}
 # Then uncomment the following...
 
-AuthName "Password Protected Directory"
-AuthUserFile /var/www/html/.htpasswd
-AuthType Basic
-require valid-user
+    AuthName "Password Protected Directory"
+    AuthUserFile /var/www/html/.htpasswd
+    AuthType Basic
+    require valid-user
 
 # Limit access to web server to the code-server proxy forwarder.
 # That is, only allow YOU to access the Apache Web Server via the code-server
