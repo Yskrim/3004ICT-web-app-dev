@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Feed — Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-emerald-800 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-3">
+          <div class="text-2xl font-bold text-emerald-200">SocialWave</div>
+          <nav class="hidden sm:flex space-x-4 text-sm text-white">
+            <a href="index.html" class="hover:text-emerald-100">Home</a>
+            <a href="#" class="hover:text-emerald-100">Explore</a>
+            <a href="profile.html" class="hover:text-emerald-100">Profile</a>
+          </nav>
+        </div>
+        <div class="flex items-center space-x-3">
+          <input type="search" placeholder="Search" class="hidden md:block border rounded px-3 py-1 text-sm" />
+          <button class="bg-emerald-600 text-white px-3 py-1 rounded text-sm">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Left column: feed -->
+      <section class="space-y-6">
+        <!-- New Post form -->
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h2 class="text-lg font-semibold mb-3">Create a New Post</h2>
+          <form id="new-post-form" class="space-y-3">
+            <textarea id="post-content" rows="3" placeholder="What's happening?" class="w-full border rounded p-2 focus:outline-none"></textarea>
+            <div class="flex items-center justify-between">
+              <div class="text-sm text-gray-500">Share something with your followers</div>
+              <div class="flex items-center space-x-2">
+                <button type="reset" class="px-3 py-1 rounded border text-sm">Clear</button>
+                <button type="submit" class="px-4 py-1 rounded bg-blue-600 text-white text-sm">Post</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Posts list -->
+        <div id="posts" class="space-y-4">
+          <article class="bg-white p-4 rounded-lg shadow">
+            <div class="flex items-start space-x-3">
+              <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center font-semibold">AL</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="font-semibold">Alice L.</h3>
+                    <div class="text-sm text-gray-500">2 hrs ago</div>
+                  </div>
+                </div>
+                <p class="mt-3 text-gray-800">Loving the new updates — Tailwind makes layouts so easy!</p>
+                <div class="mt-3 flex space-x-4 text-sm text-gray-600">
+                  <button class="hover:text-blue-600">Like</button>
+                  <button class="hover:text-blue-600">Comment</button>
+                  <button class="hover:text-blue-600">Share</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white p-4 rounded-lg shadow">
+            <div class="flex items-start space-x-3">
+              <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center font-semibold">BK</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="font-semibold">Ben K.</h3>
+                    <div class="text-sm text-gray-500">5 hrs ago</div>
+                  </div>
+                </div>
+                <p class="mt-3 text-gray-800">Sharing a quick tip: use utility-first CSS for rapid prototypes.</p>
+                <div class="mt-3 flex space-x-4 text-sm text-gray-600">
+                  <button class="hover:text-blue-600">Like</button>
+                  <button class="hover:text-blue-600">Comment</button>
+                  <button class="hover:text-blue-600">Share</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white p-4 rounded-lg shadow">
+            <div class="flex items-start space-x-3">
+              <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center font-semibold">CR</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="font-semibold">Cara R.</h3>
+                    <div class="text-sm text-gray-500">1 day ago</div>
+                  </div>
+                </div>
+                <p class="mt-3 text-gray-800">Excited to launch our project today — gratitude to the team!</p>
+                <div class="mt-3 flex space-x-4 text-sm text-gray-600">
+                  <button class="hover:text-blue-600">Like</button>
+                  <button class="hover:text-blue-600">Comment</button>
+                  <button class="hover:text-blue-600">Share</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Right column: sidebar -->
+      <aside class="space-y-6">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="font-semibold mb-2">Trends</h3>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>#TailwindCSS</li>
+            <li>#WebDev</li>
+            <li>#Frontend</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="font-semibold mb-2">Who to follow</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-indigo-200 rounded-full flex items-center justify-center">JT</div>
+                <div>
+                  <div class="font-semibold">Jordan T.</div>
+                  <div class="text-sm text-gray-500">@jordant</div>
+                </div>
+              </div>
+              <button class="px-3 py-1 bg-blue-600 text-white rounded text-sm">Follow</button>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    // Simple client-side handler to append a new post to the feed
+    const form = document.getElementById('new-post-form');
+    const posts = document.getElementById('posts');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const content = document.getElementById('post-content').value.trim();
+      if (!content) return;
+      const article = document.createElement('article');
+      article.className = 'bg-white p-4 rounded-lg shadow';
+      article.innerHTML = `
+        <div class="flex items-start space-x-3">
+          <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-semibold">ME</div>
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-semibold">You</h3>
+                <div class="text-sm text-gray-500">just now</div>
+              </div>
+            </div>
+            <p class="mt-3 text-gray-800">${content.replace(/</g, '&lt;')}</p>
+            <div class="mt-3 flex space-x-4 text-sm text-gray-600">
+              <button class="hover:text-blue-600">Like</button>
+              <button class="hover:text-blue-600">Comment</button>
+              <button class="hover:text-blue-600">Share</button>
+            </div>
+          </div>
+        </div>
+      `;
+      posts.prepend(article);
+      form.reset();
+    });
+  </script>
+</body>
+</html>

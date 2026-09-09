@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Profile — SocialWave</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-emerald-800 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-3">
+          <div class="text-2xl font-bold text-emerald-200">SocialWave</div>
+          <nav class="hidden sm:flex space-x-4 text-sm text-white">
+            <a href="index.html" class="hover:text-emerald-100">Home</a>
+            <a href="#" class="hover:text-emerald-100">Explore</a>
+            <a href="profile.html" class="hover:text-emerald-100">Profile</a>
+          </nav>
+        </div>
+        <div class="flex items-center space-x-3">
+          <input type="search" placeholder="Search" class="hidden md:block border rounded px-3 py-1 text-sm" />
+          <button class="bg-emerald-600 text-white px-3 py-1 rounded text-sm">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Profile card (left on desktop) -->
+      <aside class="lg:col-span-1">
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Profile picture" class="w-32 h-32 rounded-full mx-auto object-cover" />
+          <h1 class="mt-4 text-xl font-semibold">Alex Morgan</h1>
+          <div class="text-sm text-gray-500">@alexm</div>
+          <p class="mt-4 text-gray-700">Frontend engineer passionate about building delightful user experiences. Coffee, dogs, and clean CSS.</p>
+          <div class="mt-4 flex justify-center space-x-3">
+            <a href="index.html" class="px-4 py-1 border rounded text-sm">Back to Feed</a>
+            <button class="px-4 py-1 bg-blue-600 text-white rounded text-sm">Follow</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Photos grid (right on desktop) -->
+      <section class="lg:col-span-2">
+        <div class="bg-white p-4 rounded-lg shadow mb-6">
+          <h2 class="text-lg font-semibold">Photos</h2>
+          <p class="text-sm text-gray-500 mt-1">A selection of recent moments</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div class="rounded-xl overflow-hidden bg-white shadow"><img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Photo 1" class="w-full h-40 object-cover" /></div>
+          <div class="rounded-xl overflow-hidden bg-white shadow"><img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Photo 2" class="w-full h-40 object-cover" /></div>
+          <div class="rounded-xl overflow-hidden bg-white shadow"><img src="https://images.unsplash.com/photo-1491972690050-ba117db4dc09?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Photo 3" class="w-full h-40 object-cover" /></div>
+          <div class="rounded-xl overflow-hidden bg-white shadow"><img src="https://images.unsplash.com/photo-1491972690050-ba117db4dc09?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Photo 3" class="w-full h-40 object-cover" /></div>
+          <div class="rounded-xl overflow-hidden bg-white shadow"><img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Photo 5" class="w-full h-40 object-cover" /></div>
+          <div class="rounded-xl overflow-hidden bg-white shadow"><img src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Photo 6" class="w-full h-40 object-cover" /></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
