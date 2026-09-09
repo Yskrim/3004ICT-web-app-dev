@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+    <head>
+        <title>L1 T2</title>
+        <meta charset="utf-8" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <div
+            id="app3"
+            class="flex flex-col justify-center align-center border border-gray-300 rounded-lg p-8 gap-5 m-12 max-w-3xl"
+        >
+            <div class="flex flex-col">
+                <h2 class="text-2xl font-black mb-2">Get personal details</h2>
+                <label class="text-sm" for="form3">Personal details form</label>
+            </div>
+            <form class="flex flex-col gap-4">
+                <div class="flex flex-wrap gap-4">
+                    <div class="max-w-56 w-full">
+                        <label class="text-sm flex flex-col" for="name">
+                            <span> Name </span>
+                            <input
+                                class="border rounded-md bg-gray-50 border-gray-400 p-2"
+                                type="text"
+                                id="name"
+                            />
+                        </label>
+
+                        <label class="flex flex-col" for="age">
+                            <span class="text-sm">Age</span>
+                            <select
+                                class="border rounded-md bg-gray-50 border-gray-400 p-2"
+                                id="age"
+                            >
+                                <option>1-10</option>
+                                <option>11-18</option>
+                                <option>19-24</option>
+                                <option>25-34</option>
+                                <option>35-50</option>
+                                <option>Over 50</option>
+                            </select>
+                        </label>
+
+                        <label class="flex flex-col">
+                            <span class="text-sm">Country</span>
+                            <select
+                                class="border rounded-md bg-gray-50 border-gray-400 p-2 w-full"
+                            >
+                                <option value="Australia">Australia</option>
+                                <option value="USA">USA</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label class="flex flex-col w-full max-w-56">
+                        <span class="text-sm">Description</span>
+                        <textarea
+                            class="border rounded-md bg-gray-50 border-gray-400 p-2 h-full"
+                        ></textarea>
+                    </label>
+
+                    <label class="flex flex-col max-w-24 w-full">
+                        <span class="text-sm">Likes</span>
+                        <div id="likes">
+                            <div style="display: flex; flex-direction: column">
+                                <label>
+                                    <input type="checkbox" value="Swimming" />
+                                    <span>Swimming</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="Running" />
+                                    <span>Running</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="Dancing" />
+                                    <span>Dancing</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="Biking" />
+                                    <span>Biking</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="Surfing" />
+                                    <span>Surfing</span>
+                                </label>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="flex flex-col max-w-24 w-full">
+                        <span class="text-sm">Disikes</span>
+                        <div id="likes">
+                            <div style="display: flex; flex-direction: column">
+                                <label>
+                                    <input type="radio" value="Dogs" />
+                                    <span>Dogs</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="Cats" />
+                                    <span>Cats</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="Snakes" />
+                                    <span>Snakes</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="Birds" />
+                                    <span>Birds</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="Spiders" />
+                                    <span>Spiders</span>
+                                </label>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="flex gap-2">
+                    <button
+                        class="grow border rounded-lg bg-blue-700 py-2 px-3 text-white"
+                        type="submit"
+                    >
+                        Submit
+                    </button>
+                    <button
+                        class="grow border pointer rounded-lg border-blue-700 py-2 px-3"
+                        type="reset"
+                    >
+                        Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
